@@ -10,10 +10,11 @@
       extend: {
         colors: {
           bg: '#030F40',
-          primary: '#1a41f8'
+          primary: '#1a41f8',
+          secondary: '#5170FF'
         },
         fontFamily: {
-          'poppins': ['Poppins', 'sans-serif'],
+          'raleway': ['Raleway', 'sans-serif'],
         },
         screens: {
           '2xl': {'max': '1535px'},
@@ -21,10 +22,11 @@
           'lg': {'max': '1023px'},
           'lgo': {'min': '1023px'},
           'md': {'max': '767px'},
+          'mdo': {'min': '767px'},
           'sm': {'max': '639px'},
         }
       },
     },
-    plugins: [],
+    plugins: [require('daisyui')],
   };
   export default config;

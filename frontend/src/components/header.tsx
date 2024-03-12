@@ -1,21 +1,25 @@
+'use client'
 import React from 'react'
-import '../app/globals.css'
+import { FaTelegram, FaYoutube, FaInstagram, FaTiktok } from "react-icons/fa"
+import { FaXTwitter } from "react-icons/fa6"
 import logo from '../assets/logo.png'
-import { FaDiscord, FaInstagram, FaYoutube } from 'react-icons/fa'
+import { courseUri } from '@/data'
 
 function Header() {
   return (
-    <div className='pt-8 fixed left-0 right-0 top-0 flex justify-center items-center z-10'>
-        <div className='text-white w-11/12 p-4 rounded-full border-primary border-2 flex justify-between z-20'>
-            <div className='flex justify-start items-center flex-row'>
-                <img src={logo.src} width={48} className='rounded-full border-2 border-primary'></img>
+    <div className='w-screen grid grid-cols-3 gap-4 items-center pt-4 bg-white text-primary p-3 md:flex md:justify-center md:items-center'>
+        <div className='flex flex-row justify-start items-center h-full col-span-1 md:hidden'>
+        </div>
+        <div className='flex flex-col justify-center items-center h-full col-span-1'>
+            <img alt="image"src={logo.src} height={48} width={48} className='rounded-full border-2 border-orimary'/>
+            <div className='flex flex-row justify-end items-center h-full col-span-1 mt-4'>
+                <FaTelegram onClick={()=>{window.open('https://t.me/ecptrds')}} size={24} className='mx-2 transition duration-500 hover:scale-110 cursor-pointer'/>
+                <FaInstagram onClick={()=>{window.open('https://instagram.com/ecptrades')}} size={24} className='mx-2 transition duration-500 hover:scale-110 cursor-pointer'/>
+                <FaXTwitter onClick={()=>{window.open('https://x.com/ecptrds')}} size={24} className='mx-2 transition duration-500 hover:scale-110 cursor-pointer'/>
+                <FaYoutube onClick={()=>{window.open('https://www.youtube.com/@ecptrds')}} size={24} className='mx-2 transition duration-500 hover:scale-110 cursor-pointer'/>
+                <FaTiktok onClick={()=>{window.open('https://tiktok.com/@ecptrades')}} size={24} className='mx-2 transition duration-500 hover:scale-110 cursor-pointer'/>
             </div>
-            <div className='flex justify-end items-center flex-row'>
-                <FaDiscord size={24} className='mr-4 z-10 text-primary transition duration-500 hover:text-primary cursor-pointer'/>
-                <FaInstagram size={24} className='mr-4 text-primary transition duration-500 hover:text-primary cursor-pointer'/>
-                <FaYoutube size={24} className='mr-4 text-primary transition duration-500 hover:text-primary cursor-pointer'/>
-                <button className='bg-primary h-full rounded-full font-bold px-8 transition duration-500 hover:opacity-50 active:scale-90'>Join Now</button>
-            </div>
+            <button onClick={()=>{window.open(courseUri)}} className='p-2 px-4 font-raleway mt-4 font-bold rounded-full bg-primary text-white transition duration-300 hover:bg-transparent hover:text-primary hover:scale-110'>Join Now</button>
         </div>
     </div>
   )

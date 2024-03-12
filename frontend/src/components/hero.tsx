@@ -1,23 +1,18 @@
+'use client'
 import React from 'react'
 import '../app/globals.css'
-import heroAsset from '../assets/heroasset.gif'
+import { courseUri } from '@/data'
 
 function HeroSubPage() {
   return (
-    <div className='min-h-screen hero-bg bg-cover flex flex-row text-white'>
-        <div className='w-full h-full bg-[rgba(26,65,248,0.35)] absolute justify-center items-center flex-row flex'>    
-            <div className='w-7/12 flex justify-start items-center pl-24 flex-col lg:p-8 mt-8 md: mt-20 lg:w-full'>
-                <h1 className='font-bold font-Poppins text-5xl font-bold text-start w-full md:text-center'>Forex Trading at its <span className='text-primary'>Peak</span>.</h1>
-                <p className='mt-6 text-lg font-poppins md:text-center'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam iaculis sollicitudin ornare. In convallis diam semper purus dignissim vehicula. Aenean elementum tempor diam, sit amet aliquam risus venenatis non. In sed euismod dui. Suspendisse id sagittis diam, et cursus erat.</p>
-                <div className='flex mt-6 justify-center items-center w-full flex-row lg:flex-col'>
-                    <button className='w-1/2 mr-2 bg-primary text-primary font-bold p-2 rounded-full transition duration-500 hover:opacity-50 active:scale-90 active:opacity-100 text-white lg:mx-0 lg:mb-2 lg:w-full'>Join Now</button>
-                    <button className='w-1/2 ml-2 border-primary border-2 text-primary font-bold p-2 rounded-full transition duration-500 hover:opacity-50 active:scale-90 active:opacity-100 lg:mx-0 lg:mt-2 lg:w-full'>Get In Touch</button>
-                </div>
-            </div>
-            <div className='w-5/12 flex justify-center items-center lg:hidden'>
-                <img src={heroAsset.src} width={heroAsset.width} className='scale-90'/>
-            </div>
+    <div className='lgo:min-h-screen w-full flex flex-row text-black px-32 lg:px-8 lg:mb-12'>
+      <div className='flex w-full justify-start lgo:min-h-screen items-center pt-16 lg:pt-6 flex-col'>
+        <h1 className='text-4xl font-raleway font-bold text-slate-800 text-center'>Here&lsquo;s how <span className='text-primary'>I</span> might be able to <span className='text-primary underline'>Help</span> you:</h1>
+        <iframe className='w-full mt-16 h-[600px] lg:h-[175px] rounded-xl border-4 border-primary ' src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Rick Astley - Never Gonna Give You Up (Official Music Video)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+        <div className='flex justify-between items-center flex-row w-full'>
+          <button onClick={()=>{window.open(courseUri)}} className='w-full animate-button hover:animate-none mr-4 mt-16 mb-8 lg:mb-0 bg-primary p-6 lg:mb-0 border-2 border-primary rounded-xl transition duration-300 hover:bg-secondary hover:border-secondary lg:mr-0'><h1 className='text-white font-raleway font-bold text-3xl'>Join Now</h1></button>
         </div>
+      </div>
     </div>
   )
 }

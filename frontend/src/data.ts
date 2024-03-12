@@ -1,0 +1,1 @@
+export const courseUri = 'https://whop.com/checkout/4POCrSdLfXdmOqsX6x-2CtE-6BIB-AKek-hVimwdTuYe6V/'
